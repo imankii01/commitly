@@ -5,6 +5,7 @@ import { getGitDiff } from "../src/git-diff.js";
 import { generateCommitMessage } from "../src/ai-generator.js";
 import { selectOption } from "../src/utils.js";
 import chalk from "chalk";
+import { execSync } from "child_process"; // Import execSync
 
 program
   .command("setup")
@@ -19,6 +20,15 @@ program
     const model = getSelectedModel();
     if (!apiKey || !model) {
       console.log(chalk.red("❌ API Key or Model not set! Run 'smart-commit setup' first."));
+      process.exit(1);
+    }
+
+    // 🔹 Auto-stage all changes before generating commit
+    try {
+      console.log(chalk.yellow("📌 Staging all changes (git add .)..."));
+      execSync("git add .", { stdio: "inherit" });
+    } catch (error) {
+      console.log(chalk.red("❌ Error staging files. Make sure you're in a Git repository."));
       process.exit(1);
     }
 
