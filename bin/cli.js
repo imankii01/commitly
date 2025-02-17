@@ -5,7 +5,7 @@ import { getGitDiff } from '../src/git-diff.js'
 import { generateCommitMessage } from '../src/ai-generator.js'
 import { selectOption } from '../src/utils.js'
 import chalk from 'chalk'
-import { execSync } from 'child_process' 
+import { execSync } from 'child_process'
 
 program
   .command('setup')
@@ -53,14 +53,17 @@ program
     if (selectedMessage === 'Regenerate') {
       const newMessage = await generateCommitMessage(apiKey, model, gitDiff)
       console.log(chalk.green(`\n📝 New Commit Message:\n"${newMessage}"\n`))
-      execSync(`git commit -m "${newMessage}"`, { stdio: 'inherit' })
+      execSync(`git commit -m "${newMessage.replace(/"/g, '\\"')}" --no-edit`, {
+        stdio: 'inherit'
+      })
     } else if (selectedMessage !== 'Cancel') {
       console.log(
         chalk.green(`\n✅ Final Commit Message:\n"${selectedMessage}"\n`)
       )
-      execSync(`git commit -m ${JSON.stringify(selectedMessage)}`, {
-        stdio: 'inherit'
-      })
+      execSync(
+        `git commit -m "${selectedMessage.replace(/"/g, '\\"')}" --no-edit`,
+        { stdio: 'inherit' }
+      )
     }
   })
 
