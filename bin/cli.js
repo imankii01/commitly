@@ -19,7 +19,7 @@ program
     const apiKey = getApiKey();
     const model = getSelectedModel();
     if (!apiKey || !model) {
-      console.log(chalk.red("❌ API Key or Model not set! Run 'smart-commit setup' first."));
+      console.log(chalk.red("❌ API Key or Model not set! Run 'commitly setup' first."));
       process.exit(1);
     }
 

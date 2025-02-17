@@ -1,12 +1,12 @@
 {
-  "name": "smart-commit",
+  "name": "commitly",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "bin": {
-    "smart-commit": "./bin/cli.js"
+    "commitly": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
     "git",
     "commit",
     "AI",
-    "smart-commit",
+    "commitly",
     "developer-tools",
     "cli",
     "github",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/imankii01/smart-commit.git"
+    "url": "https://github.com/imankii01/commitly.git"
   },
-  "homepage": "https://github.com/imankii01/smart-commit",
+  "homepage": "https://github.com/imankii01/commitly",
   "bugs": {
-    "url": "https://github.com/imankii01/smart-commit/issues"
+    "url": "https://github.com/imankii01/commitly/issues"
   }
 }
