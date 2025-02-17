@@ -53,17 +53,38 @@ program
     if (selectedMessage === 'Regenerate') {
       const newMessage = await generateCommitMessage(apiKey, model, gitDiff)
       console.log(chalk.green(`\n📝 New Commit Message:\n"${newMessage}"\n`))
-      execSync(`git commit -m "${newMessage.replace(/"/g, '\\"')}" --no-edit`, {
+
+      // Ensure proper escaping for double quotes and avoid empty message
+      const escapedMessage = newMessage.replace(/"/g, '\\"')
+      if (!escapedMessage) {
+        console.log(chalk.red('❌ Commit message is empty. Aborting commit.'))
+        return
+      }
+
+      // Log the final message to check if it's correctly formatted
+      console.log(`Commit Message: "${escapedMessage}"`)
+
+      execSync(`git commit -m "${escapedMessage}" --no-edit`, {
         stdio: 'inherit'
       })
     } else if (selectedMessage !== 'Cancel') {
       console.log(
         chalk.green(`\n✅ Final Commit Message:\n"${selectedMessage}"\n`)
       )
-      execSync(
-        `git commit -m "${selectedMessage.replace(/"/g, '\\"')}" --no-edit`,
-        { stdio: 'inherit' }
-      )
+
+      // Ensure proper escaping for double quotes and avoid empty message
+      const escapedMessage = selectedMessage.replace(/"/g, '\\"')
+      if (!escapedMessage) {
+        console.log(chalk.red('❌ Commit message is empty. Aborting commit.'))
+        return
+      }
+
+      // Log the final message to check if it's correctly formatted
+      console.log(`Commit Message: "${escapedMessage}"`)
+
+      execSync(`git commit -m "${escapedMessage}" --no-edit`, {
+        stdio: 'inherit'
+      })
     }
   })
 
