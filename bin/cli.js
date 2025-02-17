@@ -20,7 +20,7 @@ program
     const model = getSelectedModel()
     if (!apiKey || !model) {
       console.log(
-        chalk.red("❌ API Key or Model not set! Run 'commitly setup' first.")
+        chalk.red("❌ API Key or Model not set! Run 'commito setup' first.")
       )
       process.exit(1)
     }

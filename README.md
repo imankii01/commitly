@@ -1,7 +1,7 @@
-# 📌 AI-Powered Commit Message Generator (commitly)
+# 📌 AI-Powered Commit Message Generator (commito)
 
 ## 📝 Overview
-**commitly** is an AI-powered CLI tool that automatically generates meaningful commit messages by analyzing your staged Git changes. It supports **Google Gemini, OpenAI's ChatGPT (GPT-4), and Anthropic Claude**, allowing developers to create **clear, structured, and context-aware** commit messages effortlessly.
+**commito** is an AI-powered CLI tool that automatically generates meaningful commit messages by analyzing your staged Git changes. It supports **Google Gemini, OpenAI's ChatGPT (GPT-4), and Anthropic Claude**, allowing developers to create **clear, structured, and context-aware** commit messages effortlessly.
 
 ## 🎯 Key Features
 ✅ **Multi-Model Support** – Choose from Gemini, ChatGPT, or Claude AI models.  
@@ -23,13 +23,13 @@
 
 ### 🔹 Install the Package
 ```sh
-npm install -g commitly
+npm install -g commito
 ```
 
 ### 🔹 Configure API Key & AI Model
 To use AI-generated commit messages, set up your preferred AI model:
 ```sh
-commitly setup
+commito setup
 ```
 You'll be prompted to enter:
 1. **Your AI API Key** (Google Gemini, OpenAI, or Claude)
@@ -40,11 +40,11 @@ You'll be prompted to enter:
 # 🚀 How to Use
 
 ### 🔹 1. Stage Your Code (Automatically Handled)
-You don’t need to run `git add .` manually—**commitly does it for you!**
+You don’t need to run `git add .` manually—**commito does it for you!**
 
 ### 🔹 2. Generate Commit Message
 ```sh
-commitly generate
+commito generate
 ```
 
 ### 🔹 3. Select & Confirm Your Commit Message
@@ -55,7 +55,7 @@ You'll see AI-generated commit messages with options:
 
 ### 🔹 4. Use in Git Commit
 ```sh
-git commit -m "$(commitly generate)"
+git commit -m "$(commito generate)"
 ```
 This directly applies the AI-generated commit message!
 
@@ -78,13 +78,13 @@ This directly applies the AI-generated commit message!
 
 ### 🔹 Update API Key or Model
 ```sh
-commitly setup
+commito setup
 ```
 You can reconfigure at any time!
 
 ### 🔹 Check Current Configuration
 ```sh
-cat ~/.commitlyrc
+cat ~/.commitorc
 ```
 
 ---
@@ -92,8 +92,8 @@ cat ~/.commitlyrc
 # 🔎 Troubleshooting
 
 ### ❓ AI Not Generating Messages?
-✅ Ensure your API key is correctly set up (`commitly setup`).  
-✅ Check for API rate limits (`commitly debug`).  
+✅ Ensure your API key is correctly set up (`commito setup`).  
+✅ Check for API rate limits (`commito debug`).  
 ✅ Verify that your staged files contain actual code changes (`git diff --cached`).
 
 ### ❓ Command Not Found?
@@ -115,7 +115,7 @@ This will properly register the CLI tool.
 
 # 🤝 Contribute & Support
 Found a bug or have a feature request? Open an issue at:
-👉 [GitHub Repository](https://github.com/imankii01/commitly)
+👉 [GitHub Repository](https://github.com/imankii01/commito)
 
 ### 🔹 How to Contribute
 We welcome contributions from everyone! Here's how you can get involved:
@@ -126,7 +126,7 @@ We welcome contributions from everyone! Here's how you can get involved:
 
 We review all PRs and are happy to help you through the process.
 
-### 🔹 How You Can Improve commitly
+### 🔹 How You Can Improve commito
 - **Refactor code for better performance.**
 - **Add support for additional Git features** (e.g., Git hooks, custom commit templates).
 - **Enhance AI models** or implement new models for better accuracy and versatility.
@@ -136,7 +136,7 @@ We review all PRs and are happy to help you through the process.
 ---
 
 # 💸 Buy Me a Coffee ☕
-If you enjoy using **commitly** and want to support its continued development, consider buying me a coffee! It helps fund new features, bug fixes, and keep the project alive.
+If you enjoy using **commito** and want to support its continued development, consider buying me a coffee! It helps fund new features, bug fixes, and keep the project alive.
 
 👉 [Buy Me a Coffee](https://www.buymeacoffee.com/imankii01)
 

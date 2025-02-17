@@ -1,12 +1,12 @@
 {
-  "name": "commitly",
+  "name": "commito",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "bin": {
-    "commitly": "./bin/cli.js"
+    "commito": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
     "git",
     "commit",
     "AI",
-    "commitly",
+    "commito",
     "developer-tools",
     "cli",
     "github",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/imankii01/commitly.git"
+    "url": "https://github.com/imankii01/commito.git"
   },
-  "homepage": "https://github.com/imankii01/commitly",
+  "homepage": "https://github.com/imankii01/commito",
   "bugs": {
-    "url": "https://github.com/imankii01/commitly/issues"
+    "url": "https://github.com/imankii01/commito/issues"
   }
 }
