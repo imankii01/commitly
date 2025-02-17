@@ -6,17 +6,28 @@
     "test": "tests"
   },
   "bin": {
-  "smart-commit": "./bin/cli.js"
-},
-
+    "smart-commit": "./bin/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "git",
+    "commit",
+    "AI",
+    "smart-commit",
+    "developer-tools",
+    "cli",
+    "github",
+    "git-commit-message",
+    "open-source",
+    "productivity",
+    "code-quality"
+  ],
+  "author": "Ankit",
   "license": "ISC",
   "type": "module",
-  "description": "",
+  "description": "AI-powered CLI tool that generates meaningful commit messages based on your staged Git changes, supporting Google Gemini, ChatGPT, and Claude models.",
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
@@ -25,5 +36,13 @@
     "husky": "^9.1.7",
     "inquirer": "^12.4.2",
     "node-fetch": "^3.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imankii01/smart-commit.git"
+  },
+  "homepage": "https://github.com/imankii01/smart-commit",
+  "bugs": {
+    "url": "https://github.com/imankii01/smart-commit/issues"
   }
 }
